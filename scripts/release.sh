@@ -12,5 +12,5 @@ if [[ ! -z ${NODE_AUTH_TOKEN} ]] ; then
 fi
 
 # Release package
-echo "Publishing @zunder/ui"
+echo "Publishing @zunderai/ui"
 npm publish -q --access public

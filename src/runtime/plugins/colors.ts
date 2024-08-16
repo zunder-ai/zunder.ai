@@ -19,12 +19,12 @@ export default defineNuxtPlugin(() => {
 
     if (!primary) {
       console.warn(
-        `[@zunder/ui] Primary color '${appConfig.ui.primary}' not found in Tailwind config`
+        `[@zunderai/ui] Primary color '${appConfig.ui.primary}' not found in Tailwind config`
       )
     }
     if (!gray) {
       console.warn(
-        `[@zunder/ui] Gray color '${appConfig.ui.gray}' not found in Tailwind config`
+        `[@zunderai/ui] Gray color '${appConfig.ui.gray}' not found in Tailwind config`
       )
     }
 

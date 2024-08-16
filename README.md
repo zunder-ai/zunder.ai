@@ -28,15 +28,15 @@ Whether you're building a chatbot, a content generation tool, or a complex AI-po
 To install Zunder UI in your project, run one of the following commands:
 
 ```
-npm install @zunder/ui
+npm install @zunderai/ui
 
 # or
 
-yarn add @zunder/ui
+yarn add @zunderai/ui
 
 # or
 
-pnpm add @zunder/ui (recommended)
+pnpm add @zunderai/ui (recommended)
 
 ```
 

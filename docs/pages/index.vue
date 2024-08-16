@@ -48,7 +48,7 @@
           icon="i-heroicons-command-line"
           class="w-72"
           input-class="focus:ring-1 focus:ring-gray-300 dark:focus:ring-gray-700"
-          aria-label="Install @zunder/ui"
+          aria-label="Install @zunderai/ui"
           size="lg"
           :ui="{ icon: { trailing: { pointer: '' } } }"
         >
@@ -87,7 +87,7 @@ import { useElementBounding, useWindowScroll } from '@vueuse/core'
 //   twitterImage: 'https://ui.nuxt.com/social-card.png'
 // })
 
-const source = ref('pnpm add @zunder/ui')
+const source = ref('pnpm add @zunderai/ui')
 const sectionRef = ref()
 const start = ref(0)
 

@@ -5,7 +5,7 @@ settings:
   excludeLinksFromLockfile: false
 
 overrides:
-  '@zunder/ui': workspace:*
+  '@zunderai/ui': workspace:*
   nuxt-component-meta: 0.6.4
 
 importers:
@@ -220,7 +220,7 @@ importers:
       '@nuxt/ui':
         specifier: latest
         version: 2.18.4(magicast@0.3.4)(rollup@4.20.0)(vite@5.4.1(@types/node@22.3.0)(terser@5.31.6))(vue@3.4.38(typescript@5.5.4))
-      '@zunder/ui':
+      '@zunderai/ui':
         specifier: workspace:*
         version: link:..
       nuxt:
