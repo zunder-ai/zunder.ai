@@ -1,0 +1,15 @@
+{
+    "private": true,
+    "name": "@zunder/ui-playground",
+    "type": "module",
+    "scripts": {
+      "dev": "nuxi dev",
+      "build": "nuxi build",
+      "generate": "nuxi generate"
+    },
+    "devDependencies": {
+      "nuxt": "latest",
+      "@nuxt/ui": "latest",
+      "@zunder/ui": "latest"
+    }
+  }

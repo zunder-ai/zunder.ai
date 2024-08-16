@@ -1,0 +1,132 @@
+<!-- eslint-disable vue/no-v-html -->
+<template>
+  <div>
+    <ULandingHero :ui="{ base: 'relative z-[1]', container: 'max-w-4xl' }" class="mb-[calc(var(--header-height)*2)]">
+      <template #headline>
+        <UBadge
+          variant="subtle"
+          size="md"
+          class="hover:bg-primary-100 dark:bg-primary-950/100 dark:hover:bg-primary-900 transition-color relative font-medium rounded-full shadow-none"
+        >
+          <NuxtLink
+            :to="`https://github.com/nuxt/ui/releases/tag/v${config.version.split('.').slice(0, -1).join('.')}.0`"
+            target="_blank"
+            class="focus:outline-none"
+            aria-label="Go to last relase"
+            tabindex="-1"
+          >
+            <span class="absolute inset-0" aria-hidden="true" />
+          </NuxtLink>
+
+          <span class="flex items-center gap-1">
+            Try Zunder UI Alpha v{{ config.version.split('.').slice(0, -1).join('.') }} for free
+          </span>
+        </UBadge>
+      </template>
+
+      <template #title>
+        <span>A library for building AI Web Apps fast</span>
+      </template>
+
+      <template #description>
+        <span>Zunder is a Nuxt UI compatible Library for building AI Apps, powered by Vue & Tailwind CSS</span>
+      </template>
+
+      <template #links>
+        <UButton
+          label="Get Started"
+          trailing-icon="i-heroicons-arrow-right-20-solid"
+          size="lg"
+          to="/getting-started/installation"
+        />
+
+        <UInput
+          v-model="source"
+          color="gray"
+          readonly
+          autocomplete="off"
+          icon="i-heroicons-command-line"
+          class="w-72"
+          input-class="focus:ring-1 focus:ring-gray-300 dark:focus:ring-gray-700"
+          aria-label="Install @zunder/ui"
+          size="lg"
+          :ui="{ icon: { trailing: { pointer: '' } } }"
+        >
+          <template #trailing>
+            <UButton
+              aria-label="Copy Code"
+              :color="copied ? 'primary' : 'gray'"
+              variant="link"
+              size="2xs"
+              :icon="copied ? 'i-heroicons-clipboard-document-check' : 'i-heroicons-clipboard-document'"
+              @click="copy(source)"
+            />
+          </template>
+        </UInput>
+      </template>
+
+      <ClientOnly>
+        <HomeAbstractRaycast />
+      </ClientOnly>
+    </ULandingHero>
+  </div>
+</template>
+
+<script setup lang="ts">
+import { useElementBounding, useWindowScroll } from '@vueuse/core'
+
+// const { data: page } = await useAsyncData('index', () => queryContent('/dev').findOne())
+
+// useSeoMeta({
+//   titleTemplate: '',
+//   title: page.value.title,
+//   ogTitle: page.value.title,
+//   description: page.value.description,
+//   ogDescription: page.value.description,
+//   ogImage: 'https://ui.nuxt.com/social-card.png',
+//   twitterImage: 'https://ui.nuxt.com/social-card.png'
+// })
+
+const source = ref('pnpm add @zunder/ui')
+const sectionRef = ref()
+const start = ref(0)
+
+const { top } = useElementBounding(sectionRef)
+const { y } = useWindowScroll()
+const config = useRuntimeConfig().public
+const { copy, copied } = useClipboard({ source })
+
+// Hooks
+
+onMounted(() => {
+  setTimeout(() => {
+    start.value = top.value + y.value
+  }, 100)
+})
+</script>
+
+<style scoped lang="postcss">
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.2s ease;
+}
+
+.fade-enter-from,
+.fade-leave-to {
+  opacity: 0;
+}
+
+._screen_xl {
+  display: none;
+}
+
+@media (min-width: 1280px) and (min-height: 955px) {
+  ._screen_xl {
+    display: block;
+  }
+
+  ._not_screen_xl {
+    display: none;
+  }
+}
+</style>
