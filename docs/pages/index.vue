@@ -37,7 +37,7 @@
           label="Get Started"
           trailing-icon="i-heroicons-arrow-right-20-solid"
           size="lg"
-          to="/getting-started/installation"
+          to="/docs/getting-started/installation"
         />
 
         <UInput
@@ -89,8 +89,8 @@ const links = computed(() => {
   return [{
     label: 'Docs',
     icon: 'i-heroicons-book-open',
-    to: '/getting-started',
-    active: (route.path.startsWith('/getting-started') || route.path.startsWith('/components'))
+    to: '/docs/getting-started',
+    active: (route.path.startsWith('/docs/getting-started') || route.path.startsWith('/docs/components'))
   }].filter(Boolean)
 })
 

@@ -63,8 +63,8 @@ const links = computed(() => {
   return [{
     label: 'Docs',
     icon: 'i-heroicons-book-open',
-    to: '/getting-started',
-    active: (route.path.startsWith('/getting-started') || route.path.startsWith('/components'))
+    to: '/docs/getting-started',
+    active: (route.path.startsWith('/docs/getting-started') || route.path.startsWith('/docs/components'))
   }].filter(Boolean)
 })
 

@@ -50,19 +50,12 @@ export default defineNuxtConfig({
       langs: ['postcss', 'mdc']
     }
     // sources: {
-      // dev: {
-      //   prefix: "/dev",
-      //   driver: "fs",
-      //   base: resolve("./content"),
-      // },
-      // overwrite default source AKA `content` directory
-      // content: {
-      //   driver: "github",
-      //   repo: "nuxt/ui",
-      //   branch: "main",
-      //   dir: "docs/content",
-      // }
-    // },
+    //   content: {
+    //     driver: 'fs',
+    //   prefix: '/docs', // All contents inside this source will be prefixed with `/docs`
+    //     base: resolve(__dirname, 'content')
+    //   }
+    // }
   },
 
   image: {
@@ -73,7 +66,7 @@ export default defineNuxtConfig({
     prerender: {
       routes: [
         '/',
-        '/getting-started'
+        '/docs/getting-started'
         // '/api/search.json'
         // '/api/releases.json',
         // '/api/pulls.json'
@@ -86,7 +79,7 @@ export default defineNuxtConfig({
   },
 
   routeRules: {
-    '/components': { redirect: '/components/chat-input', prerender: false }
+    '/docs/components': { redirect: '/docs/components/chat-input', prerender: false }
     // '/dev/components': {
     //   redirect: '/dev/components/accordion',
     //   prerender: false

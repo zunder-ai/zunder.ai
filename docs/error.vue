@@ -70,8 +70,8 @@ const links = computed(() => {
   return [{
     label: 'Docs',
     icon: 'i-heroicons-book-open',
-    to: branch.value?.name === 'dev' ? '/dev/getting-started' : '/getting-started',
-    active: branch.value?.name === 'dev' ? (route.path.startsWith('/dev/getting-started') || route.path.startsWith('/dev/components')) : (route.path.startsWith('/getting-started') || route.path.startsWith('/components'))
+    to: branch.value?.name === 'dev' ? '/dev/getting-started' : '/docs/getting-started',
+    active: branch.value?.name === 'dev' ? (route.path.startsWith('/dev/getting-started') || route.path.startsWith('/dev/components')) : (route.path.startsWith('/docs/getting-started') || route.path.startsWith('/docs/components'))
   }].filter(Boolean)
 })
 
