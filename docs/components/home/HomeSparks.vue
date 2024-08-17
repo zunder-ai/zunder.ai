@@ -6,23 +6,17 @@
       class="spark"
       :style="{ left: `${spark.x}px`, top: `${spark.y}px` }"
     />
-    <div v-if="debug" class="debug-info">
-      <p>Mouse X: {{ x }}, Y: {{ y }}</p>
-      <p>Sparks: {{ sparks.length }}</p>
-      <p>Mouse over container: {{ isMouseOverContainer }}</p>
-    </div>
   </div>
 </template>
 
 <script setup lang="ts">
-import { ref, computed, onMounted, onUnmounted, watch } from 'vue'
+import { ref, computed, onMounted, onUnmounted } from 'vue'
 import { useMouse, useRafFn, useThrottleFn } from '@vueuse/core'
 
 const props = defineProps<{
   containerRef: HTMLElement | null
 }>()
 
-const debug = ref(true) // Set to true to show debug info
 const { x, y } = useMouse()
 const sparks = ref<{ id: number; x: number; y: number }[]>([])
 let sparkId = 0
