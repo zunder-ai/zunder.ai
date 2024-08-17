@@ -33,8 +33,7 @@ if (process.server) {
         <div class="lg:flex-1 hidden lg:flex items-center" />
 
         <p class="text-sm font-medium text-white dark:text-gray-900">
-          <UIcon name="i-heroicons-rocket-launch" class="w-5 h-5 align-top flex-shrink-0 pointer-events-none mr-2" />
-          <span class="font-semibold">ZUNDER Alpha</span> sprays its first sparks. See it in action
+          🔥 <span class="font-semibold">ZUNDER Alpha</span> sprays its first sparks. See it in action
         </p>
 
         <div class="flex items-center justify-end lg:flex-1">

@@ -3,6 +3,10 @@
   <div>
     <NuxtLoadingIndicator />
 
+    <ClientOnly>
+      <HomeAbstractRaycast />
+    </ClientOnly>
+
     <Banner v-if="!$route.path.startsWith('/examples')" />
 
     <Header v-if="!$route.path.startsWith('/examples')" :links="links" />

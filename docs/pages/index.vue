@@ -1,7 +1,7 @@
 <!-- eslint-disable vue/no-v-html -->
 <template>
   <div>
-    <ULandingHero :ui="{ base: 'relative z-[1]', container: 'max-w-4xl' }" class="mb-[calc(var(--header-height)*2)]">
+    <ULandingHero :ui="{ base: 'relative z-[1]', container: 'max-w-4xl', title: 'font-medium tracking-[-4px]' }" class="mb-[calc(var(--header-height)*2)]">
       <template #headline>
         <UBadge
           variant="subtle"
@@ -64,28 +64,36 @@
           </template>
         </UInput>
       </template>
-
-      <ClientOnly>
-        <HomeAbstractRaycast />
-      </ClientOnly>
     </ULandingHero>
   </div>
 </template>
 
 <script setup lang="ts">
 import { useElementBounding, useWindowScroll } from '@vueuse/core'
+const route = useRoute()
 
 // const { data: page } = await useAsyncData('index', () => queryContent('/dev').findOne())
 
-// useSeoMeta({
-//   titleTemplate: '',
-//   title: page.value.title,
-//   ogTitle: page.value.title,
-//   description: page.value.description,
-//   ogDescription: page.value.description,
-//   ogImage: 'https://ui.nuxt.com/social-card.png',
-//   twitterImage: 'https://ui.nuxt.com/social-card.png'
-// })
+useSeoMeta({
+  titleTemplate: '',
+  title: 'ZUNDER AI - Build smarter, launch faster, and make your AI web apps a reality.',
+  ogTitle: 'ZUNDER AI - Build smarter, launch faster, and make your AI web apps a reality.',
+  description: 'Build and launch AI web apps quickly with ease. Ignite your ideas, create efficiently, and go live faster. Perfect for startups and developers looking to accelerate their AI app development.',
+  ogDescription: 'Build and launch AI web apps quickly with ease. Ignite your ideas, create efficiently, and go live faster. Perfect for startups and developers looking to accelerate their AI app development.',
+  ogImage: 'https://zunder.ai/social-card.png',
+  twitterImage: 'https://zunder.ai/social-card.png'
+})
+
+
+const links = computed(() => {
+  return [{
+    label: 'Docs',
+    icon: 'i-heroicons-book-open',
+    to: '/getting-started',
+    active: (route.path.startsWith('/getting-started') || route.path.startsWith('/components'))
+  }].filter(Boolean)
+})
+
 
 const source = ref('pnpm add @zunderai/ui')
 const sectionRef = ref()
