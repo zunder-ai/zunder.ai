@@ -1,10 +1,12 @@
 # ZUNDER
 
+![Zunder AI Logo](docs/public/zunder_ai_logo_banner.png)
+
 Zunder is a Nuxt UI compatible Library for building AI Apps, powered by Vue & Tailwind CSS
 
 > **⚠️ IMPORTANT NOTICE**
 > 
-> Zunder UI is currently in an early stage of development. The API is subject to change, and breaking changes may occur in future releases. While I encourage you to explore and provide feedback, please use caution.
+> Zunder UI is currently in an early stage of development. The API is subject to change, and breaking changes may occur in future releases.  I'm happy for you to explore and give feedback, but please use it with care.
 
 ## Why Zunder?
 
@@ -27,7 +29,7 @@ Whether you're building a chatbot, a content generation tool, or a complex AI-po
 
 To install Zunder UI in your project, run one of the following commands:
 
-```
+```bash
 npm install @zunderai/ui
 
 # or
@@ -37,7 +39,6 @@ yarn add @zunderai/ui
 # or
 
 pnpm add @zunderai/ui (recommended)
-
 ```
 
 
@@ -45,7 +46,7 @@ pnpm add @zunderai/ui (recommended)
 
 For full documentation, visit [official documentation site](https://zunder.ai).
 
-## Contributing (Coming soon)
+## Contributing
 
 Contributions to Zunder are welcome and appreciated! As a solo developer, I'm always excited to see community involvement. Here's how you can contribute:
 
@@ -63,7 +64,8 @@ For support, please open an issue on our [GitHub repository](https://github.com/
 
 ## Stay Connected
 
-- Follow us on [Twitter](https://twitter.com/regenrek)
-- Star our [GitHub repo](https://github.com/regenrek/zunder-ui)
+- Website [zunder.ai](https://zunder.ai)
+- My X [Twitter](https://twitter.com/regenrek)
+- Star on Github [GitHub repo](https://github.com/regenrek/zunder-ui)
 
 Thank you! 
