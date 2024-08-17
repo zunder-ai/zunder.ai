@@ -1,4 +1,4 @@
-# ZUNDER AI
+# ZUNDER
 
 Zunder is a Nuxt UI compatible Library for building AI Apps, powered by Vue & Tailwind CSS
 
