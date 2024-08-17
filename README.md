@@ -1,8 +1,9 @@
 # ZUNDER
 
-![Zunder AI Logo](docs/public/zunder_ai_logo_banner.png)
+[![Zunder AI Logo](docs/public/zunder_ai_logo_banner.png)](https://zunder.ai)
 
-Zunder is a Nuxt UI compatible Library for building AI Apps, powered by Vue & Tailwind CSS
+
+[ZUNDER](https://zunder.ai) is a Nuxt UI compatible Library for building AI Apps, powered by Vue & Tailwind CSS
 
 > **⚠️ IMPORTANT NOTICE**
 > 
@@ -22,7 +23,7 @@ Whether you're building a chatbot, a content generation tool, or a complex AI-po
 
 ## Features
 
-- Built on top of @nuxt/ui
+- Built on top of [@nuxt/ui](https://ui.nuxt.com/)
 - Fully customizable components
 
 ## Installation
