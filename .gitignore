@@ -10,9 +10,3 @@ dist
 .idea
 .env
 .data
-
-docs/content_backup
-
-./app.vue
-./app.config.ts
-./nuxt.config.ts

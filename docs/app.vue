@@ -1,10 +1,11 @@
 <!-- eslint-disable vue/no-v-html -->
 <template>
-  <div>
+  <div ref="backgroundRef">
     <NuxtLoadingIndicator />
 
     <ClientOnly>
       <HomeAbstractRaycast />
+      <HomeSparks :container-ref="backgroundRef" />
     </ClientOnly>
 
     <Banner v-if="!$route.path.startsWith('/examples')" />
@@ -41,6 +42,7 @@
 import { withoutTrailingSlash } from 'ufo'
 import { debounce } from 'perfect-debounce'
 import type { ParsedContent } from '@nuxt/content'
+const backgroundRef = ref<HTMLElement | null>(null)
 
 const searchRef = ref()
 

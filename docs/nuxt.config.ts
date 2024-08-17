@@ -9,8 +9,10 @@ const { resolve } = createResolver(import.meta.url)
 export default defineNuxtConfig({
 
   devtools: {
-    enabled: true
+    enabled: false
   },
+
+  css: ['~/assets/css/global.css'],
 
   // @ts-ignore
   extends: ['@nuxt/ui-pro'],

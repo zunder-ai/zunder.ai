@@ -9,7 +9,7 @@
           class="hover:bg-primary-100 dark:bg-primary-950/100 dark:hover:bg-primary-900 transition-color relative font-medium rounded-full shadow-none"
         >
           <NuxtLink
-            :to="`https://github.com/regenrek/zunder-ui/releases/tag/v${config.version.split('.').slice(0, -1).join('.')}.0`"
+            :to="`https://github.com/regenrek/zunder-ui/releases/tag/v${config.version}`"
             target="_blank"
             class="focus:outline-none"
             aria-label="Go to last relase"
@@ -19,7 +19,7 @@
           </NuxtLink>
 
           <span class="flex items-center gap-1">
-            Try Zunder UI Alpha v{{ config.version.split('.').slice(0, -1).join('.') }} for free
+            Try Zunder UI Alpha v{{ config.version }} for free
           </span>
         </UBadge>
       </template>
