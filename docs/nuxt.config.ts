@@ -9,7 +9,7 @@ const { resolve } = createResolver(import.meta.url)
 export default defineNuxtConfig({
 
   devtools: {
-    enabled: false
+    enabled: true
   },
 
   css: ['~/assets/css/global.css'],
@@ -48,14 +48,14 @@ export default defineNuxtConfig({
   content: {
     highlight: {
       langs: ['postcss', 'mdc']
+    },
+    sources: {
+      content: {
+        driver: 'fs',
+        prefix: '/docs',
+        base: resolve(__dirname, 'content/docs')
+      }
     }
-    // sources: {
-    //   content: {
-    //     driver: 'fs',
-    //   prefix: '/docs', // All contents inside this source will be prefixed with `/docs`
-    //     base: resolve(__dirname, 'content')
-    //   }
-    // }
   },
 
   image: {
@@ -79,6 +79,8 @@ export default defineNuxtConfig({
   },
 
   routeRules: {
+    '/docs': { redirect: '/docs/getting-started/introduction', prerender: false },
+    '/docs/getting-started': { redirect: '/docs/getting-started/introduction', prerender: false },
     '/docs/components': { redirect: '/docs/components/chat-input', prerender: false }
     // '/dev/components': {
     //   redirect: '/dev/components/accordion',
