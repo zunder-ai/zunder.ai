@@ -1,7 +1,7 @@
 <template>
   <UHeader
     :links="links"
-    :ui="{ wrapper: 'bg-background/20' }"
+    :ui="{ wrapper: 'bg-background/20', center: 'font-heading' }"
     :class="{
       'border-primary-200/75 dark:border-primary-900/50': $route.path === '/',
       'border-gray-200 dark:border-gray-800': $route.path !== '/'
@@ -41,7 +41,14 @@
 
       <BranchSelect />
 
-      <UNavigationTree :links="mapContentNavigation(navigation)" :multiple="false" default-open />
+      <UNavigationTree
+        :ui="{ links:
+          'font-heading'
+        }"
+        :links="mapContentNavigation(navigation)"
+        :multiple="false"
+        default-open
+      />
     </template>
   </UHeader>
 </template>

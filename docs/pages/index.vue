@@ -1,7 +1,7 @@
 <!-- eslint-disable vue/no-v-html -->
 <template>
   <div>
-    <ULandingHero :ui="{ base: 'relative z-[1]', container: 'max-w-4xl', title: 'font-medium tracking-[-4px]' }" class="mb-[calc(var(--header-height)*2)]">
+    <ULandingHero :ui="{ base: 'relative z-[1]', container: 'max-w-4xl', title: 'font-medium font-heading tracking-[-4px]' }" class="mb-[calc(var(--header-height)*2)]">
       <template #headline>
         <UBadge
           variant="subtle"

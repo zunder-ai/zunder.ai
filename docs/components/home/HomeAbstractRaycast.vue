@@ -54,5 +54,6 @@ watch(colorMode, updateBeamColors, { immediate: true })
     var(--beam-color-transparent) 70%
   );
   filter: blur(3px);
+  z-index: -1;
 }
 </style>

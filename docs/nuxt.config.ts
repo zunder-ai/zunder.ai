@@ -54,6 +54,11 @@ export default defineNuxtConfig({
         driver: 'fs',
         prefix: '/docs',
         base: resolve(__dirname, 'content/docs')
+      },
+      guide: {
+        driver: 'fs',
+        prefix: '/guide',
+        base: resolve(__dirname, 'content/guide')
       }
     }
   },
