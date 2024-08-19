@@ -26,8 +26,15 @@ export default defineNuxtConfig({
     '@nuxtjs/plausible',
     '@vueuse/nuxt',
     'nuxt-component-meta',
-    'modules/content-examples-code'
+    'modules/content-examples-code',
+    '@nuxtjs/sitemap'
   ],
+
+  site: {
+    url: 'https://zunder.ai',
+    name: 'zunder.ai',
+    defaultLocale: 'en'
+  },
 
   plausible: {
     // Prevent tracking on localhost
@@ -43,6 +50,11 @@ export default defineNuxtConfig({
   ui: {
     global: true,
     safelistColors: excludeColors(colors)
+  },
+
+  sitemap: {
+    sources: [ '/api/__sitemap__/urls'
+    ]
   },
 
   content: {
@@ -140,10 +152,6 @@ export default defineNuxtConfig({
 
   typescript: {
     strict: false
-  },
-
-  site: {
-    url: 'https://zunder.ai'
   },
 
   vite: {
