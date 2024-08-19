@@ -6,7 +6,7 @@
           <UAside :links="links">
             <BranchSelect />
 
-            <UNavigationTree :links="mapContentNavigation(navigation)" :default-open="1" />
+            <UNavigationTree :links="mapContentNavigation(navigation)" />
           </UAside>
         </template>
 

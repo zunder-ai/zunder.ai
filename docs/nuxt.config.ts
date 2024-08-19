@@ -58,6 +58,9 @@ export default defineNuxtConfig({
   },
 
   content: {
+    navigation: {
+      fields: ['tags']
+    },
     highlight: {
       langs: ['postcss', 'mdc']
     },
@@ -94,6 +97,16 @@ export default defineNuxtConfig({
           : []
     }
   },
+
+  // routes: (_routes) => [
+  //   {
+  //     name: 'tutorials-category',
+  //     path: '/tutorials/ai-chat',
+  //     component: () => import('~/pages/tutorials/index.vue').then(r => r.default || r)
+  //   }
+  // ],
+
+
 
   routeRules: {
     '/docs': { redirect: '/docs/getting-started/introduction', prerender: false },
@@ -148,6 +161,17 @@ export default defineNuxtConfig({
         }
       })
     }
+    // 'pages:extend': (pages) => {
+    //   const types = ['ai-chat', 'seo', 'ai-knowledge-base']
+
+    //   types.forEach((type) =>
+    //     pages.push({
+    //       name: `tags-${type}`,
+    //       path: `/tutorials/${type}`,
+    //       file: resolve(__dirname, 'pages/tutorials/index.vue')
+    //     })
+    //   )
+    // }
   },
 
   typescript: {

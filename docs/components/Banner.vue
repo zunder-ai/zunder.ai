@@ -1,6 +1,6 @@
 <script setup lang="ts">
 const id = 'nuxt-ui-banner-1'
-const to = '/pro/pricing'
+const to = '/docs'
 
 const hideBanner = () => {
   localStorage.setItem(id, 'true')

@@ -49,7 +49,9 @@ const searchRef = ref()
 const route = useRoute()
 const colorMode = useColorMode()
 
+
 const { data: nav } = await useAsyncData('navigation', () => fetchContentNavigation())
+
 const { data: files } = useLazyFetch<ParsedContent[]>('/api/search.json', { default: () => [], server: false })
 
 // Computed
@@ -65,6 +67,11 @@ const links = computed(() => {
     icon: 'i-heroicons-book-open',
     to: '/docs/getting-started',
     active: (route.path.startsWith('/docs/getting-started') || route.path.startsWith('/docs/components'))
+  }, {
+    label: 'Community',
+    icon: 'i-heroicons-book-open',
+    to: '/tutorials',
+    active: (route.path.startsWith('/tutorials'))
   }].filter(Boolean)
 })
 
