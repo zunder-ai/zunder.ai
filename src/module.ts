@@ -74,12 +74,12 @@ export default defineNuxtModule<ModuleOptions>({
       global: options.global,
       watch: false
     })
-    addComponentsDir({
-      path: resolve(runtimeDir, 'components', 'layout'),
-      prefix: options.prefix,
-      global: options.global,
-      watch: false
-    })
+    // addComponentsDir({
+    //   path: resolve(runtimeDir, 'components', 'layout'),
+    //   prefix: options.prefix,
+    //   global: options.global,
+    //   watch: false
+    // })
 
     // Composables
     addImportsDir(resolve(runtimeDir, 'composables'))
