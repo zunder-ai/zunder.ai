@@ -19,7 +19,7 @@
 
 <script setup lang="ts">
 import type { NavItem } from '@nuxt/content'
-import { ref, computed, inject } from 'vue'
+import { computed, inject } from 'vue'
 import { useRoute } from 'vue-router'
 
 const nav = inject<Ref<NavItem[]>>('navigation')

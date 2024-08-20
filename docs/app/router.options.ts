@@ -1,5 +1,4 @@
 import type { RouterConfig } from '@nuxt/schema'
-import { resolve } from 'path'
 
 const types = ['ai-chat', 'seo', 'ai-knowledge-base'] as const
 type TutorialType = typeof types[number]

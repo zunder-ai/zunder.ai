@@ -2,8 +2,7 @@ import {
   defineNuxtModule,
   addComponentsDir,
   addImportsDir,
-  createResolver,
-  installModule
+  createResolver
 } from '@nuxt/kit'
 import { name, version } from '../package.json'
 

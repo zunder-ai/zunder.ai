@@ -70,7 +70,6 @@
 
 <script setup lang="ts">
 import { useElementBounding, useWindowScroll } from '@vueuse/core'
-const route = useRoute()
 
 // const { data: page } = await useAsyncData('index', () => queryContent('/dev').findOne())
 
@@ -85,14 +84,14 @@ useSeoMeta({
 })
 
 
-const links = computed(() => {
-  return [{
-    label: 'Docs',
-    icon: 'i-heroicons-book-open',
-    to: '/docs/getting-started/installation',
-    active: (route.path.startsWith('/docs/getting-started') || route.path.startsWith('/docs/components'))
-  }].filter(Boolean)
-})
+// const links = computed(() => {
+//   return [{
+//     label: 'Docs',
+//     icon: 'i-heroicons-book-open',
+//     to: '/docs/getting-started/installation',
+//     active: (route.path.startsWith('/docs/getting-started') || route.path.startsWith('/docs/components'))
+//   }].filter(Boolean)
+// })
 
 
 const source = ref('pnpm add @zunderai/ui')
