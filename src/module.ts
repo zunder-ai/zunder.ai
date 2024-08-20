@@ -6,8 +6,6 @@ import {
   installModule
 } from '@nuxt/kit'
 import { name, version } from '../package.json'
-import createTemplates from './templates'
-import installTailwind from './tailwind'
 
 
 export interface ModuleOptions {
@@ -56,8 +54,8 @@ export default defineNuxtModule<ModuleOptions>({
     // createTemplates(nuxt)
 
 
-    await installModule('@nuxt/ui')
-    await installModule('@nuxt/icon')
+    //await installModule('@nuxt/ui')
+    // await installModule('@nuxt/icon')
     // await installModule('@nuxtjs/color-mode', { classSuffix: '' })
     // await installTailwind(options, nuxt, resolve)
 
