@@ -12,7 +12,7 @@ export default defineNuxtConfig({
   css: ['~/assets/css/global.css'],
 
   nitro: {
-    preset: 'vercel',
+    preset: 'vercel-edge',
     output: {
       dir: '.vercel/output'
     }
