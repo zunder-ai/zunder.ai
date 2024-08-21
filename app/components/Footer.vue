@@ -4,7 +4,7 @@
   <UFooter :ui="{ top: { container: 'py-2 bg-red-500' } }">
     <template #left>
       <NuxtLink
-        to="https://github.com/regenrek/zunder-ui"
+        to="https://github.com/zunder-ai/zunder-ui"
         target="_blank"
         class="text-sm text-gray-500 dark:text-gray-400"
       >
@@ -30,7 +30,7 @@
       <UButton
         aria-label="Zunder on GitHub"
         icon="i-simple-icons-github"
-        to="https://github.com/regenrek/zunder-ui"
+        to="https://github.com/zunder-ai/zunder-ui"
         target="_blank"
         v-bind="($ui.button.secondary as any)"
       />

@@ -3,7 +3,7 @@
     <time :datetime="date.day.toISOString()" class="flex-shrink-0 text-sm/6 font-semibold text-gray-500 dark:text-gray-400">{{ date.day.toLocaleString('en-us', { year: 'numeric', month: 'short', day: 'numeric' })
     }}</time>
 
-    <NuxtLink v-if="date.release" :to="`https://github.com/regenrek/zunder-ui/releases/tag/${date.release.name}`" target="_blank" class="text-gray-900 dark:text-white font-bold text-3xl mt-2 group hover:text-primary-500 dark:hover:text-primary-400 transition-[color]">
+    <NuxtLink v-if="date.release" :to="`https://github.com/zunder-ai/zunder-ui/releases/tag/${date.release.name}`" target="_blank" class="text-gray-900 dark:text-white font-bold text-3xl mt-2 group hover:text-primary-500 dark:hover:text-primary-400 transition-[color]">
       {{ date.release.name }}
     </NuxtLink>
     <ul v-if="date.pulls?.length" class="mt-2 space-y-1 text-gray-600 dark:text-gray-300">

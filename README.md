@@ -1,6 +1,6 @@
 # zunder.ai Website
 
-[![Zunder AI Logo](docs/public/zunder_ai_logo_banner.png)](https://zunder.ai)
+[![Zunder AI Logo](/public/zunder_ai_logo_banner.png)](https://zunder.ai)
 
 [ZUNDER](https://zunder.ai) Official zunder.ai website
 

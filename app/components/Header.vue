@@ -26,7 +26,7 @@
       <UColorModeButton />
 
       <UButton
-        to="https://github.com/regenrek/zunder-ui"
+        to="https://github.com/zunder-ai/zunder-ui"
         target="_blank"
         icon="i-simple-icons-github"
         aria-label="GitHub"

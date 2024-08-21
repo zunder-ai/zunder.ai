@@ -73,12 +73,12 @@ defineOgImageComponent('Docs', {
 const communityLinks = computed(() => [{
   icon: 'i-heroicons-pencil-square',
   label: 'Edit this page',
-  to: `https://github.com/regenrek/zunder-ui/edit/dev/docs/content/${branch.value?.name === 'dev' ? page?.value?._file.split('/').slice(1).join('/') : page?.value?._file}`,
+  to: `https://github.com/zunder-ai/zunder.ai/edit/dev/docs/content/${branch.value?.name === 'dev' ? page?.value?._file.split('/').slice(1).join('/') : page?.value?._file}`,
   target: '_blank'
 }, {
   icon: 'i-heroicons-star',
   label: 'Star on GitHub',
-  to: 'https://github.com/regenrek/zunder-ui',
+  to: 'https://github.com/zunder-ai/zunder-ui',
   target: '_blank'
 }])
 </script>
