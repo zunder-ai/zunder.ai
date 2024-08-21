@@ -57,6 +57,9 @@ importers:
       '@vueuse/math':
         specifier: ^10.11.0
         version: 10.11.1(vue@3.4.38(typescript@5.5.4))
+      '@zunderai/ui':
+        specifier: workspace:*
+        version: 'link:'
       defu:
         specifier: ^6.1.4
         version: 6.1.4

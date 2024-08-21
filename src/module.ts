@@ -50,9 +50,6 @@ export default defineNuxtModule<ModuleOptions>({
     //   nuxt.options.css.push(resolve(runtimeDir, 'ui.css'))
     // }
 
-    // createTemplates(nuxt)
-
-
     //await installModule('@nuxt/ui')
     // await installModule('@nuxt/icon')
     // await installModule('@nuxtjs/color-mode', { classSuffix: '' })
