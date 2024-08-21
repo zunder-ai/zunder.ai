@@ -32,6 +32,7 @@
     "date-fns": "^3.6.0",
     "nuxt-component-meta": "0.6.4",
     "nuxt-og-image": "3.0.0-rc.65",
+    "shiki": "^1.14.1",
     "v-calendar": "^3.1.2"
   },
   "devDependencies": {

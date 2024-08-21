@@ -53,6 +53,9 @@ importers:
       nuxt-og-image:
         specifier: 3.0.0-rc.65
         version: 3.0.0-rc.65(magicast@0.3.4)(rollup@3.29.4)(vite@5.4.2(@types/node@22.4.2)(terser@5.31.6))(vue@3.4.38(typescript@5.5.4))
+      shiki:
+        specifier: ^1.14.1
+        version: 1.14.1
       v-calendar:
         specifier: ^3.1.2
         version: 3.1.2(@popperjs/core@2.11.8)(vue@3.4.38(typescript@5.5.4))

@@ -61,10 +61,16 @@ export default defineNuxtConfig({
     },
     sources: {
       // @TODO Remove this or change it to github
+      // content: {
+      //   driver: 'fs',
+      //   prefix: '/docs',
+      //   base: resolve(__dirname, 'content/docs')
+      // }
       content: {
-        driver: 'fs',
-        prefix: '/docs',
-        base: resolve(__dirname, 'content/docs')
+        driver: 'github',
+        repo: 'zunder-ai/zunder.ai',
+        branch: 'main',
+        dir: 'content'
       }
       // tutorials: {
       //   driver: 'fs',
