@@ -35,4 +35,4 @@ For support, please open an issue on our [GitHub repository](https://github.com/
 - My X [Twitter](https://twitter.com/regenrek)
 - Star on Github [GitHub repo](https://github.com/zunder-ai/ui)
 
-Thank you! 
+Thank you!
