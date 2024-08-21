@@ -11,6 +11,13 @@ export default defineNuxtConfig({
 
   css: ['~/assets/css/global.css'],
 
+  nitro: {
+    preset: 'vercel',
+    output: {
+      dir: '.vercel/output'
+    }
+  },
+
   // @ts-ignore
   extends: ['@nuxt/ui-pro', '@zunderai/ui'],
   modules: [
