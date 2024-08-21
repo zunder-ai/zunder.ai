@@ -1,5 +1,5 @@
 import { createResolver } from '@nuxt/kit'
-import pkg from '../package.json'
+import pkg from './package.json'
 
 const { resolve } = createResolver(import.meta.url)
 
@@ -22,7 +22,7 @@ export default defineNuxtConfig({
     '@nuxtjs/plausible',
     '@vueuse/nuxt',
     'nuxt-component-meta',
-    'modules/content-examples-code',
+    './modules/content-examples-code',
     '@nuxtjs/sitemap'
   ],
 
@@ -48,6 +48,10 @@ export default defineNuxtConfig({
     ]
   },
 
+  uiPro: {
+    routerOptions: true
+  },
+
   content: {
     navigation: {
       fields: ['tags']
@@ -61,12 +65,12 @@ export default defineNuxtConfig({
         driver: 'fs',
         prefix: '/docs',
         base: resolve(__dirname, 'content/docs')
-      },
-      guide: {
-        driver: 'fs',
-        prefix: '/tutorials',
-        base: resolve(__dirname, 'content/tutorials')
       }
+      // tutorials: {
+      //   driver: 'fs',
+      //   prefix: '/tutorials',
+      //   base: resolve(__dirname, 'content/tutorials')
+      // }
     }
   },
 
@@ -82,12 +86,12 @@ export default defineNuxtConfig({
         // '/api/search.json'
         // '/api/releases.json',
         // '/api/pulls.json'
-      ],
-      ignore:
-        !process.env.NUXT_UI_PRO_PATH && !process.env.NUXT_GITHUB_TOKEN
-          ? ['/pro']
-          : []
+      ]
     }
+  },
+
+  future: {
+    compatibilityVersion: 4
   },
 
   // routes: (_routes) => [
@@ -97,8 +101,6 @@ export default defineNuxtConfig({
   //     component: () => import('~/pages/tutorials/index.vue').then(r => r.default || r)
   //   }
   // ],
-
-
 
   routeRules: {
     '/docs': { redirect: '/docs/getting-started/introduction', prerender: false },
@@ -121,7 +123,7 @@ export default defineNuxtConfig({
       'nuxt/dist',
       'nuxt-og-image',
       'nuxt-site-config',
-      resolve('./components'),
+      resolve('./app/components'),
       process.env.NUXT_UI_PRO_PATH
         ? resolve(process.env.NUXT_UI_PRO_PATH, '.docs', 'components')
         : '.c12'
@@ -134,11 +136,6 @@ export default defineNuxtConfig({
       exposed: false
     }
   },
-
-  // cloudflareAnalytics: {
-  //   token: "",
-  //   scriptPath: false,
-  // },
 
   hooks: {
     // Related to https://github.com/nuxt/nuxt/pull/22558
@@ -153,17 +150,6 @@ export default defineNuxtConfig({
         }
       })
     }
-    // 'pages:extend': (pages) => {
-    //   const types = ['ai-chat', 'seo', 'ai-knowledge-base']
-
-    //   types.forEach((type) =>
-    //     pages.push({
-    //       name: `tags-${type}`,
-    //       path: `/tutorials/${type}`,
-    //       file: resolve(__dirname, 'pages/tutorials/index.vue')
-    //     })
-    //   )
-    // }
   },
 
   typescript: {

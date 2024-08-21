@@ -4,7 +4,6 @@
 
 [ZUNDER](https://zunder.ai) Official zunder.ai website
 
-
 ## Why Zunder?
 
 While Nuxt UI provides an excellent foundation for building Vue applications, there's a growing need for components specifically tailored to AI-driven interfaces. Zunder fills this gap by offering:

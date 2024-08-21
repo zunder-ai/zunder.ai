@@ -90,5 +90,6 @@ const loadMore = async () => {
 
 const formatDate = (date: string) => {
   // ... (keep the existing formatDate function)
+  return date
 }
 </script>
