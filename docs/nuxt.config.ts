@@ -1,7 +1,4 @@
 import { createResolver } from '@nuxt/kit'
-import colors from 'tailwindcss/colors'
-import module from '../src/module'
-import { excludeColors } from '../src/runtime/utils/colors'
 import pkg from '../package.json'
 
 const { resolve } = createResolver(import.meta.url)
@@ -15,14 +12,13 @@ export default defineNuxtConfig({
   css: ['~/assets/css/global.css'],
 
   // @ts-ignore
-  extends: ['@nuxt/ui-pro'],
+  extends: ['@nuxt/ui-pro', '@zunderai/ui'],
   modules: [
     '@nuxt/content',
     '@nuxt/fonts',
     '@nuxt/image',
     '@nuxt/ui',
     'nuxt-og-image',
-    module,
     '@nuxtjs/plausible',
     '@vueuse/nuxt',
     'nuxt-component-meta',
@@ -47,11 +43,6 @@ export default defineNuxtConfig({
     }
   },
 
-  ui: {
-    global: true,
-    safelistColors: excludeColors(colors)
-  },
-
   sitemap: {
     sources: [ '/api/__sitemap__/urls'
     ]
@@ -65,6 +56,7 @@ export default defineNuxtConfig({
       langs: ['postcss', 'mdc']
     },
     sources: {
+      // @TODO Remove this or change it to github
       content: {
         driver: 'fs',
         prefix: '/docs',
@@ -72,8 +64,8 @@ export default defineNuxtConfig({
       },
       guide: {
         driver: 'fs',
-        prefix: '/guide',
-        base: resolve(__dirname, 'content/guide')
+        prefix: '/tutorials',
+        base: resolve(__dirname, 'content/tutorials')
       }
     }
   },

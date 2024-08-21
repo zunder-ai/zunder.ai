@@ -21,11 +21,11 @@
     "build": "nuxt-module-build build",
     "prepack": "pnpm build",
     "dev": "nuxi dev docs",
-    "play": "nuxi dev playground",
     "build:docs": "nuxi generate docs",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
     "typecheck:all": "vue-tsc --noEmit && nuxi typecheck docs",
+    "typecheck:docs": "nuxi typecheck docs",
     "typecheck": "vue-tsc --noEmit",
     "dev:prepare": "nuxt-module-build build --stub && nuxt-module-build prepare && nuxi prepare docs",
     "release": "release-it",
@@ -79,7 +79,6 @@
     "zod": "^3.23.8"
   },
   "resolutions": {
-    "@zunderai/ui": "workspace:*",
     "nuxt-component-meta": "0.6.4"
   }
 }

@@ -1,9 +1,14 @@
 {
-    "extends": "./.nuxt/tsconfig.json",
-    "exclude": ["docs", "dist", "playground", "node_modules"],
-    "compilerOptions": {
-      "noImplicitAny": false,
-      "strictNullChecks": false,
-      "module": "esnext"
-    }
+  "extends": "./.nuxt/tsconfig.json",
+  "exclude": [
+    "docs",
+    "dist",
+    "playground",
+    "node_modules"
+  ],
+  "compilerOptions": {
+    "noImplicitAny": false,
+    "strictNullChecks": false,
+    "module": "esnext"
   }
+}
