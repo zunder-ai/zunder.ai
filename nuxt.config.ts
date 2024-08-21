@@ -11,13 +11,6 @@ export default defineNuxtConfig({
 
   css: ['~/assets/css/global.css'],
 
-  nitro: {
-    preset: 'vercel-edge',
-    output: {
-      dir: '.vercel/output'
-    }
-  },
-
   // @ts-ignore
   extends: ['@nuxt/ui-pro', '@zunderai/ui'],
   modules: [
@@ -86,6 +79,10 @@ export default defineNuxtConfig({
   },
 
   nitro: {
+    preset: 'vercel-edge',
+    output: {
+      dir: '.vercel/output'
+    },
     prerender: {
       routes: [
         '/',
