@@ -112,10 +112,6 @@ export default defineNuxtConfig({
   //   }
   // ],
 
-  build: {
-    transpile: ['shiki']
-  },
-
   routeRules: {
     '/docs': { redirect: '/docs/getting-started/introduction', prerender: false },
     '/docs/getting-started': { redirect: '/docs/getting-started/introduction', prerender: false },
