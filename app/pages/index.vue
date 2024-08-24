@@ -1,7 +1,7 @@
 <!-- eslint-disable vue/no-v-html -->
 <template>
   <div>
-    <ULandingHero :ui="{ base: 'relative z-[1]', container: 'max-w-4xl', title: 'font-medium font-heading tracking-[-4px]' }" class="mb-[calc(var(--header-height)*2)]">
+    <ULandingHero :ui="{ wrapper: 'py-12 sm:pt-16 sm:pb-8 mb-0', base: 'relative z-[1]', container: 'max-w-4xl', title: 'font-medium font-heading tracking-[-4px]' }">
       <template #headline>
         <UBadge
           variant="subtle"
@@ -65,6 +65,37 @@
         </UInput>
       </template>
     </ULandingHero>
+    <UContainer>
+      <ULandingGrid>
+        <ULandingCard
+          class="col-span-6 row-span-2"
+          icon="i-heroicons-swatch"
+          title="Complete Starter Kit"
+          description="Get a fully equipped Nuxt.js boilerplate with pre-built UI components to jumpstart your AI web app."
+        />
+        <ULandingCard
+          class="col-span-6 row-span-4"
+          icon="i-heroicons-wrench-screwdriver"
+          title="Customizable Components"
+          description="Easily modify the appearance and behavior of every component through simple configurations."
+        />
+        <ULandingCard
+          class="col-span-6 row-span-4"
+          icon="i-heroicons-face-smile"
+          title="Out-of-the-Box LLM Support"
+          description="Seamlessly integrate multiple LLMs like OpenAI, Claude, and Ollama into your app."
+        />
+        <ULandingCard
+          class="col-span-6 row-span-2"
+          icon="i-heroicons-computer-desktop"
+          title="Pre-built API and Dashboard"
+          description="Includes a fully coded server API and a customizable dashboard with sidebar for easy project management."
+        />
+      </ULandingGrid>
+    </UContainer>
+    <ULandingSection :ui="{ wrapper: 'py-12 sm:py-16' }">
+      <TablePricing :blok="blokPricing" />
+    </ULandingSection>
   </div>
 </template>
 
@@ -92,6 +123,66 @@ useSeoMeta({
 //     active: (route.path.startsWith('/docs/getting-started') || route.path.startsWith('/docs/components'))
 //   }].filter(Boolean)
 // })
+
+const blokPricing = ref({
+  title: 'Pricing',
+  description: 'Choose the plan that fits your needs',
+  items: [
+    {
+      title: 'Free',
+      description: 'Open Source chat app starter to build your own AI web app',
+      price: '0€',
+      monthlyPrice: '0€',
+      isMonthlyPrice: false,
+      cancellationText: ' ',
+      features: [
+        { title: 'Simple Chat Logic with OpenAI' },
+        { title: 'Basic Chat Interface Customization' },
+        { title: 'Community Support' }
+      ],
+      button: { label: 'Get Started', action: 'modal' }
+    },
+    {
+      title: 'Starter',
+      description: 'Professional AI Starter Kit to ship your AI web app fast',
+      cancellationText: '1 year of free updates',
+      price: '99€',
+      originalPrice: '149€',
+      monthlyPrice: '99€',
+      isMonthlyPrice: false,
+      isPresale: true,
+      saleEndDate: '2024-09-14',
+      features: [
+        { title: 'Everything in Free' },
+        { title: 'Supports multiple LLMs (OpenAI, Claude, Ollama)' },
+        { title: 'Fully coded Server API' },
+        { title: 'Demo apps & Dashboard with Sidebar' },
+        { title: 'Rate limits' },
+        { title: 'Access to Telegram group' },
+        { title: 'Support & 1 year of updates' }
+      ],
+      button: { label: 'Buy Now', action: 'redirect', href: 'https://zunder.ai/buy-starter' }
+    },
+    {
+      title: 'Enterprise',
+      description: 'Custom AI solutions for your business needs',
+      cancellationText: 'A zunder.ai SaaS deployment',
+      price: 'From 10k',
+      monthlyPrice: 'Custom',
+      isMonthlyPrice: false,
+      features: [
+        { title: 'Everything in Starter' },
+        { title: 'Zunder AI SaaS setup installed for you' },
+        { title: 'Custom implementations' },
+        { title: 'Managed deployments' },
+        { title: 'Personalized 1-on-1 consulting' }
+      ],
+      button: { label: 'Contact Us', action: 'email' }
+    }
+  ],
+  itemsSubscription: []
+})
+
 
 
 const source = ref('pnpm add @zunderai/ui')
