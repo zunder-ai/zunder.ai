@@ -128,16 +128,15 @@ let name = props.slug || `Z${upperFirst(camelCase(route.params.slug[route.params
 
 // TODO: Remove once merged on `main` branch
 if (['AvatarGroup', 'ButtonGroup', 'MeterGroup'].includes(name)) {
-  name = `U${name}`
+  name = `Z${name}`
 }
 if (['avatar-group', 'button-group', 'radio'].includes(name)) {
-  name = `U${upperFirst(camelCase(name))}`
+  name = `Z${upperFirst(camelCase(name))}`
 }
 
 const meta = await fetchComponentMeta(name)
 
 // Computed
-
 const fullProps = computed(() => ({ ...componentProps, ...baseProps }))
 const vModel = computed({
   get: () => baseProps.modelValue,

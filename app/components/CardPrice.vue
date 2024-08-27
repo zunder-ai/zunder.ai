@@ -93,7 +93,7 @@ const handleButtonClick = () => {
         <hr class="mb-2">
         <Typo tag="ul" size="base" class="flex flex-col gap-y-3.5 pt-4">
           <li v-for="(feature, index) in features" :key="index" class="flex gap-x-1 items-start">
-            <Icon name="lucide:arrow-up-right" class="opacity-50 mr-1" />
+            <Icon name="lucide:arrow-up-right" class="opacity-50 mr-1 w-5" />
             <Typo tag="span" size="sm" class="leading-none">
               {{ feature.title }}
             </Typo>
