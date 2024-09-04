@@ -25,4 +25,9 @@ Use the `#default` slot to customize the rendering of each message. You'll have 
 
 ## Config
 
-:component-preset
+
+```yml
+{
+  wrapper: 'grid grid-cols-6 gap-y-2'
+}
+```

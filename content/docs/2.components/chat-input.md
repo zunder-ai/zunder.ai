@@ -33,4 +33,10 @@ Use the `#append` slot to add content after the input field (e.g., a send button
 
 ## Config
 
-:component-preset
+```yml
+{
+  wrapper: 'flex items-center space-x-4 bg-gray-100 dark:bg-gray-800 p-4 rounded-3xl',
+  textarea: 'flex-grow resize-none',
+  button: ''
+}
+```

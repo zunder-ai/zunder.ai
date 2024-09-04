@@ -33,4 +33,27 @@ Use the `#metadata` slot to customize the message metadata (e.g., timestamp, sta
 
 ## Config
 
-:component-preset
+
+```yml
+{
+  wrapper: {
+    base: 'p-3 rounded-lg',
+    user: 'col-start-6',
+    assistant: 'col-start-1 col-end-3'
+  },
+  container: {
+    base: 'flex items-center',
+    user: 'justify-start flex-row-reverse',
+    assistant: 'flex-row'
+  },
+  avatar: {
+    background: 'bg-gray-500',
+    text: 'text-white font-medium'
+  },
+  message: {
+    base: 'relative text-sm py-2 px-4 shadow rounded-xl',
+    user: 'mr-3 bg-gray-100 dark:bg-gray-800',
+    assistant: 'ml-3 bg-gray-50 dark:bg-gray-800'
+  }
+}
+```
