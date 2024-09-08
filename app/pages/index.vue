@@ -161,7 +161,7 @@ const blokPricing = ref({
         { title: 'Access to Telegram group' },
         { title: 'Support & 1 year of updates' }
       ],
-      button: { label: 'Preorder Now', action: 'redirect', href: 'https://macherjek.lemonsqueezy.com/buy/d6e13edc-c956-4d0a-a95e-23b3f9df81e3' }
+      button: { label: 'Preorder Now', action: 'redirect', href: 'https://macherjek.lemonsqueezy.com/buy/70015d0a-f665-4fe8-bf67-312071121bc3' }
     },
     {
       title: 'Enterprise',
