@@ -1,3 +1,4 @@
+import vue from '@vitejs/plugin-vue'
 import { createResolver } from '@nuxt/kit'
 import pkg from './package.json'
 
@@ -97,7 +98,10 @@ export default defineNuxtConfig({
         // '/api/releases.json',
         // '/api/pulls.json'
       ]
-    }
+    },
+    rollupConfig: {
+      plugins: [vue()]
+    },
   },
 
   future: {
