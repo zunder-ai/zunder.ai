@@ -4,7 +4,7 @@ description: Display a list of chat messages.
 links:
   - label: GitHub
     icon: i-simple-icons-github
-    to: https://github.com/zunder-ui/blob/dev/src/runtime/components/chat/ChatMessages.vue
+    to: https://github.com/zunder-ai/ui/blob/dev/src/runtime/components/chat/ChatMessages.vue
 ---
 
 ## Usage

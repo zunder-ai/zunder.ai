@@ -4,7 +4,7 @@ description: Input component for sending chat messages.
 links:
   - label: GitHub
     icon: i-simple-icons-github
-    to: https://github.com/zunder-ui/blob/dev/src/runtime/components/chat/ChatInput.vue
+    to: https://github.com/zunder-ai/ui/blob/dev/src/runtime/components/chat/ChatInput.vue
 ---
 
 ## Usage

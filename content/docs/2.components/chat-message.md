@@ -4,7 +4,7 @@ description: Display a single chat message with avatar, content, and metadata.
 links:
   - label: GitHub
     icon: i-simple-icons-github
-    to: https://github.com/zunder-ai/zunder-ui/blob/dev/src/runtime/components/chat/ChatMessage.vue
+    to: https://github.com/zunder-ai/ui/blob/dev/src/runtime/components/chat/ChatMessage.vue
 ---
 
 ## Usage

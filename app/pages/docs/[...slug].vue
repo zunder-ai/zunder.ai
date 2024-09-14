@@ -78,7 +78,7 @@ const communityLinks = computed(() => [{
 }, {
   icon: 'i-heroicons-star',
   label: 'Star on GitHub',
-  to: 'https://github.com/zunder-ai/zunder-ui',
+  to: 'https://github.com/zunder-ai/ui',
   target: '_blank'
 }])
 </script>
