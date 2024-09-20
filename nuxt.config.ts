@@ -27,7 +27,7 @@ export default defineNuxtConfig({
   ],
 
   site: {
-    url: 'https://zunder.ai',
+    url: 'https://www.zunder.ai',
     name: 'zunder.ai',
     defaultLocale: 'en'
   },
