@@ -9,7 +9,7 @@
           class="hover:bg-primary-100 dark:bg-primary-950/100 dark:hover:bg-primary-900 transition-color relative font-medium rounded-full shadow-none"
         >
           <NuxtLink
-            :to="`https://github.com/zunder-ai/zunder-ui/releases/tag/v${config.version}`"
+            :to="`https://github.com/zunder-ai/ui/releases/tag/v${config.version}`"
             target="_blank"
             class="focus:outline-none"
             aria-label="Go to last relase"
@@ -128,26 +128,26 @@ const blokPricing = ref({
   title: 'Pricing',
   description: 'Choose the plan that fits your needs',
   items: [
-    {
-      title: 'Free',
-      description: 'Open Source chat app starter to build your own AI web app',
-      price: '0€',
-      monthlyPrice: '0€',
-      isMonthlyPrice: false,
-      cancellationText: ' ',
-      features: [
-        { title: 'Simple Chat Logic with OpenAI' },
-        { title: 'Basic Chat Interface Customization' },
-        { title: 'Community Support' }
-      ],
-      button: { label: 'Get Started', action: 'modal' }
-    },
+    // {
+    //   title: 'Free',
+    //   description: 'Open Source chat app starter to build your own AI web app',
+    //   price: '0€',
+    //   monthlyPrice: '0€',
+    //   isMonthlyPrice: false,
+    //   cancellationText: ' ',
+    //   features: [
+    //     { title: 'Simple Chat Logic with OpenAI' },
+    //     { title: 'Basic Chat Interface Customization' },
+    //     { title: 'Community Support' }
+    //   ],
+    //   button: { label: 'Get Started', action: 'modal' }
+    // },
     {
       title: 'Starter',
       description: 'Professional AI Starter Kit to ship your AI web app fast',
       cancellationText: '1 year of free updates',
       price: '99€',
-      originalPrice: '149€',
+      originalPrice: '249€',
       monthlyPrice: '99€',
       isMonthlyPrice: false,
       isPresale: true,
@@ -158,10 +158,9 @@ const blokPricing = ref({
         { title: 'Fully coded Server API' },
         { title: 'Demo apps & Dashboard with Sidebar' },
         { title: 'Rate limits' },
-        { title: 'Access to Telegram group' },
         { title: 'Support & 1 year of updates' }
       ],
-      button: { label: 'Preorder Now', action: 'redirect', href: 'https://macherjek.lemonsqueezy.com/buy/d6e13edc-c956-4d0a-a95e-23b3f9df81e3' }
+      button: { label: 'Preorder Now', action: 'redirect', href: 'https://macherjek.lemonsqueezy.com/buy/70015d0a-f665-4fe8-bf67-312071121bc3' }
     },
     {
       title: 'Enterprise',
