@@ -65,7 +65,7 @@
         </UInput>
       </template>
     </ULandingHero>
-    <UContainer>
+    <UContainer :ui="{ padding: 'pb-12 sm:pb-16' }">
       <ULandingGrid>
         <ULandingCard
           class="col-span-6 row-span-2"
@@ -93,9 +93,9 @@
         />
       </ULandingGrid>
     </UContainer>
-    <ULandingSection :ui="{ wrapper: 'py-12 sm:py-16' }">
+    <!-- <ULandingSection :ui="{ wrapper: 'py-12 sm:py-16' }">
       <TablePricing :blok="blokPricing" />
-    </ULandingSection>
+    </ULandingSection> -->
   </div>
 </template>
 
