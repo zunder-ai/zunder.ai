@@ -1,3 +1,4 @@
+import vue from '@vitejs/plugin-vue'
 import { createResolver } from '@nuxt/kit'
 import pkg from './package.json'
 
@@ -97,6 +98,9 @@ export default defineNuxtConfig({
         // '/api/releases.json',
         // '/api/pulls.json'
       ]
+    },
+    rollupConfig: {
+      plugins: [vue()]
     }
   },
 
@@ -111,10 +115,6 @@ export default defineNuxtConfig({
   //     component: () => import('~/pages/tutorials/index.vue').then(r => r.default || r)
   //   }
   // ],
-
-  build: {
-    transpile: ['shiki']
-  },
 
   routeRules: {
     '/docs': { redirect: '/docs/getting-started/introduction', prerender: false },
